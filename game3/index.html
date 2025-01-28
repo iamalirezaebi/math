@@ -1,0 +1,49 @@
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بازی ۸ وزیر</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>بازی ۸ وزیر</h1>
+        <div class="game-controls">
+            <div class="timer">
+                <span id="timer-display">۰۰:۰۰:۰۰</span>
+            </div>
+            <div class="sound-toggle">
+                <input type="checkbox" id="sound-toggle" checked>
+                <label for="sound-toggle">صدا</label>
+            </div>
+        </div>
+        <div id="chessboard"></div>
+        <div class="game-buttons">
+            <button id="reset-btn">شروع مجدد</button>
+            <button id="hint-btn">راهنما</button>
+        </div>
+        <div id="game-status"></div>
+        <div id="best-time">بهترین زمان: -</div>
+    </div>
+    
+    <div id="rules-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>قوانین بازی ۸ وزیر</h2>
+            <p>هدف: قرار دادن ۸ وزیر روی صفحه شطرنج به‌طوری که هیچ‌کدام همدیگر را تهدید نکنند.</p>
+            <ul>
+                <li>وزیرها نباید در یک خط افقی، عمودی یا مورب قرار بگیرند</li>
+                <li>برای گذاشتن وزیر، آن را با موس به خانه مورد نظر بکشید</li>
+                <li>موفق باشید!</li>
+            </ul>
+        </div>
+    </div>
+
+    <audio id="place-sound" src="sounds/place.mp3"></audio>
+    <audio id="remove-sound" src="sounds/remove.mp3"></audio>
+    <audio id="success-sound" src="sounds/success.mp3"></audio>
+    <audio id="error-sound" src="sounds/error.mp3"></audio>
+
+    <script type="module" src="game.js"></script>
+</body>
+</html>
