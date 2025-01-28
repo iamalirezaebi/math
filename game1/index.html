@@ -1,0 +1,56 @@
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>بازی برج هانوی</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-header">
+            <h1>بازی برج هانوی</h1>
+            <div class="game-stats">
+                <span>زمان: <span id="timer">۰۰:۰۰</span></span>
+                <span>حرکات: <span id="moves">۰</span></span>
+            </div>
+        </div>
+
+        <div class="game-settings">
+            <label for="disk-count">تعداد دیسک‌ها:</label>
+            <select id="disk-count">
+                <option value="3">۳ دیسک</option>
+                <option value="4">۴ دیسک</option>
+                <option value="5">۵ دیسک</option>
+                <option value="6">۶ دیسک</option>
+                <option value="7">۷ دیسک</option>
+            </select>
+            <button id="start-game">شروع بازی</button>
+        </div>
+
+        <div class="game-board" id="game-board">
+            <div class="tower" id="tower1"></div>
+            <div class="tower" id="tower2"></div>
+            <div class="tower" id="tower3"></div>
+        </div>
+
+        <div class="game-controls">
+            <button id="reset-game">بازنشانی بازی</button>
+            <div class="sound-toggle">
+                <label>
+                    <input type="checkbox" id="sound-toggle" checked>
+                    صدا
+                </label>
+            </div>
+        </div>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <h2>تبریک!</h2>
+                <p id="win-message"></p>
+                <button id="close-modal">بستن</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="hanoi.js" type="module"></script>
+</body>
+</html>
