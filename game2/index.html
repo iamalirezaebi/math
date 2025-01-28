@@ -1,0 +1,67 @@
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سودوکو فارسی</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <div class="game-container">
+            <div class="header">
+                <h1>بازی سودوکو</h1>
+                <div class="game-controls">
+                    <button @click="startNewGame('easy')">آسان</button>
+                    <button @click="startNewGame('medium')">متوسط</button>
+                    <button @click="startNewGame('hard')">سخت</button>
+                </div>
+            </div>
+
+            <div class="game-board">
+                <div v-for="(row, rowIndex) in board" :key="rowIndex" class="sudoku-row">
+                    <div 
+                        v-for="(cell, colIndex) in row" 
+                        :key="colIndex" 
+                        class="sudoku-cell"
+                        :class="{
+                            'preset-cell': cell.preset,
+                            'selected': selectedCell.row === rowIndex && selectedCell.col === colIndex
+                        }"
+                        @click="selectCell(rowIndex, colIndex)"
+                    >
+                        {{ cell.value ? convertToPersianDigits(cell.value) : '' }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="number-input">
+                <button 
+                    v-for="num in persianNumbers" 
+                    :key="num"
+                    @click="enterNumber(num)"
+                >
+                    {{ num }}
+                </button>
+                <button @click="clearCell">پاک کردن</button>
+                <button @click="getHint">راهنما</button>
+            </div>
+
+            <div class="game-stats">
+                <div>زمان: {{ formatTime(elapsedTime) }}</div>
+                <div>سطح دشواری: {{ difficultyLabel }}</div>
+            </div>
+
+            <div v-if="gameCompleted" class="victory-modal">
+                <div class="modal-content">
+                    <h2>تبریک! 🎉</h2>
+                    <p>شما سودوکو را با موفقیت حل کردید!</p>
+                    <button @click="closeVictoryModal">بستن</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
