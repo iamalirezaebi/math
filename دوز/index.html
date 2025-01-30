@@ -1,0 +1,56 @@
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دوز (Tic Tac Toe)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>بازی دوز</h1>
+        
+        <div class="game-settings">
+            <div class="mode-selector">
+                <label for="game-mode">حالت بازی:</label>
+                <select id="game-mode">
+                    <option value="pvp">بازیکن با بازیکن</option>
+                    <option value="ai">بازیکن با کامپیوتر</option>
+                </select>
+            </div>
+
+            <div class="board-size-selector">
+                <label for="board-size">اندازه جدول:</label>
+                <select id="board-size">
+                    <option value="3">3×3 (کلاسیک)</option>
+                    <option value="4">4×4 (متوسط)</option>
+                    <option value="5">5×5 (پیشرفته)</option>
+                </select>
+            </div>
+
+            <div class="difficulty-selector" style="display: none;">
+                <label for="ai-difficulty">سختی کامپیوتر:</label>
+                <select id="ai-difficulty">
+                    <option value="easy">آسان</option>
+                    <option value="medium">متوسط</option>
+                    <option value="hard">سخت</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="theme-toggle">
+            <input type="checkbox" id="theme-switch">
+            <label for="theme-switch">تم تاریک</label>
+        </div>
+
+        <div id="game-board" class="game-board"></div>
+
+        <div id="game-status" class="game-status"></div>
+
+        <div class="game-controls">
+            <button id="reset-btn">شروع دوباره</button>
+        </div>
+    </div>
+
+    <script type="module" src="game.js"></script>
+</body>
+</html>

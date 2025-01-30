@@ -1,0 +1,67 @@
+body {
+    font-family: 'Vazirmatn', Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    direction: rtl;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.game-board {
+    display: grid;
+    gap: 10px;
+    margin: 20px auto;
+    justify-content: center;
+}
+
+.game-cell {
+    width: 60px;
+    height: 60px;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    cursor: text;
+    transition: all 0.3s ease;
+}
+
+.game-cell input {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: none;
+    background: transparent;
+    font-size: 18px;
+}
+
+.game-cell.valid {
+    background-color: #c8e6c9;
+}
+
+.game-cell.invalid {
+    background-color: #ffcdd2;
+}
+
+.status-message {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.error {
+    color: #d32f2f;
+}
+
+.success {
+    color: #2e7d32;
+}

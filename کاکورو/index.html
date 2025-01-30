@@ -1,0 +1,70 @@
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بازی کاکورو</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>کاکورو</h1>
+            <div class="theme-toggle">
+                <button id="theme-switch">تغییر تم</button>
+            </div>
+        </header>
+        
+        <div class="game-container">
+            <div class="game-controls">
+                <div class="difficulty-selector">
+                    <label>سطح سختی:</label>
+                    <select id="difficulty">
+                        <option value="easy">آسان</option>
+                        <option value="medium">متوسط</option>
+                        <option value="hard">سخت</option>
+                    </select>
+                </div>
+                <div class="board-size-selector">
+                    <label>اندازه جدول:</label>
+                    <select id="board-size">
+                        <option value="5">5×5</option>
+                        <option value="7">7×7</option>
+                        <option value="9" selected>9×9</option>
+                    </select>
+                </div>
+                <div class="game-actions">
+                    <button id="new-game">پازل جدید</button>
+                    <button id="hint">راهنما</button>
+                    <button id="solve">حل کامل</button>
+                </div>
+            </div>
+
+            <div id="kakuro-board"></div>
+
+            <div class="game-feedback">
+                <div id="timer">زمان: 00:00</div>
+                <div id="status-message"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="number-input-modal" class="modal">
+        <div class="modal-content">
+            <div class="number-grid">
+                <button class="number-btn" data-number="1">1</button>
+                <button class="number-btn" data-number="2">2</button>
+                <button class="number-btn" data-number="3">3</button>
+                <button class="number-btn" data-number="4">4</button>
+                <button class="number-btn" data-number="5">5</button>
+                <button class="number-btn" data-number="6">6</button>
+                <button class="number-btn" data-number="7">7</button>
+                <button class="number-btn" data-number="8">8</button>
+                <button class="number-btn" data-number="9">9</button>
+                <button class="number-btn" data-number="0">پاک کردن</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="kakuro.js"></script>
+</body>
+</html>

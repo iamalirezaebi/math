@@ -1,0 +1,23 @@
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>مربع جادویی</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>بازی مربع جادویی</h1>
+        <div class="game-controls">
+            <select id="board-size">
+                <option value="3">3×3</option>
+                <option value="4">4×4</option>
+                <option value="5">5×5</option>
+            </select>
+            <button id="start-game">شروع بازی</button>
+        </div>
+        <div id="game-board" class="game-board"></div>
+        <div id="status-message" class="status-message"></div>
+    </div>
+    <script type="module" src="game.js"></script>
+</body>
+</html>

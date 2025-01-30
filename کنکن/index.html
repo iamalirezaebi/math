@@ -1,0 +1,65 @@
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KenKen بازی</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-header">
+            <h1>KenKen بازی</h1>
+            <div class="game-controls">
+                <select id="difficulty">
+                    <option value="easy">آسان</option>
+                    <option value="medium" selected>متوسط</option>
+                    <option value="hard">سخت</option>
+                </select>
+                <select id="grid-size">
+                    <option value="3">۳×۳</option>
+                    <option value="4" selected>۴×۴</option>
+                    <option value="5">۵×۵</option>
+                    <option value="6">۶×۶</option>
+                </select>
+                <button id="new-game">بازی جدید</button>
+            </div>
+            <div class="game-stats">
+                <span>زمان: <span id="timer">۰۰:۰۰</span></span>
+                <span>امتیاز: <span id="score">۰</span></span>
+            </div>
+        </div>
+        
+        <div id="kenken-grid" class="kenken-grid"></div>
+        
+        <div class="number-selector">
+            <div class="number-row">
+                <button class="number-btn">۱</button>
+                <button class="number-btn">۲</button>
+                <button class="number-btn">۳</button>
+                <button class="number-btn">۴</button>
+            </div>
+            <div class="number-row">
+                <button class="number-btn">۵</button>
+                <button class="number-btn">۶</button>
+                <button class="erase-btn">پاک کردن</button>
+            </div>
+        </div>
+        
+        <div class="game-actions">
+            <button id="undo-btn">برگشت</button>
+            <button id="check-btn">بررسی</button>
+            <button id="hint-btn">راهنما</button>
+        </div>
+    </div>
+
+    <div id="dark-mode-toggle">
+        <label class="switch">
+            <input type="checkbox" id="dark-mode-checkbox">
+            <span class="slider"></span>
+        </label>
+        <span>حالت شب</span>
+    </div>
+
+    <script type="module" src="game.js"></script>
+</body>
+</html>
