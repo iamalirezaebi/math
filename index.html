@@ -1,80 +1,25 @@
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iamalirezaebi</title>
+    <title>Puzzle Games Menu</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/sahel-font@v3.4.0/dist/Sahel.css" rel="stylesheet">
 </head>
 <body>
-    <div class="background"></div>
     <div class="container">
-        <header>
-            <h1><span class="persian-title">iamalirezaebi</span></h1>
-        </header>
-        
-        <main class="game-menu">
-            <!-- Game 1: هانوی -->
-            <div class="game-card" data-game="hanoi">
-                <div class="game-icon hanoi-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                        <rect x="10" y="80" width="80" height="10" fill="#FF6B6B"/>
-                        <rect x="35" y="40" width="30" height="40" fill="#4ECDC4"/>
-                        <rect x="45" y="20" width="10" height="20" fill="#A8DADC"/>
-                        <circle cx="50" cy="10" r="10" fill="#6A5ACD"/>
-                    </svg>
-                </div>
-                <h2>هانوی</h2>
-                <p class="game-description">برج هانوی را حل کنید!</p>
-                <button onclick="window.location.href='./game1/index.html'">شروع بازی</button>
-                <button onclick="window.location.href='./han.txt'">آموزش هانوی</button>
-            </div>
-            
-            <!-- Game 2: سودوکو -->
-            <div class="game-card" data-game="sudoku">
-                <div class="game-icon sudoku-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                        <rect x="10" y="10" width="80" height="80" fill="#F7F7FF" stroke="#457B9D" stroke-width="5"/>
-                        <line x1="10" y1="40" x2="90" y2="40" stroke="#457B9D" stroke-width="3"/>
-                        <line x1="10" y1="70" x2="90" y2="70" stroke="#457B9D" stroke-width="3"/>
-                        <line x1="40" y1="10" x2="40" y2="90" stroke="#457B9D" stroke-width="3"/>
-                        <line x1="70" y1="10" x2="70" y2="90" stroke="#457B9D" stroke-width="3"/>
-                        <text x="50" y="60" text-anchor="middle" font-size="30" fill="#FFD93D">9</text>
-                    </svg>
-                </div>
-                <h2>سودوکو</h2>
-                <p class="game-description">مهارت منطقی خود را آزمایش کنید!</p>
-                <button onclick="window.location.href='./game2/index.html'">شروع بازی</button>
-                <button onclick="window.location.href='./sud.txt'">آموزش سودوکو</button>
-            </div>
-            
-            <!-- Game 3: 8 وزیر -->
-            <div class="game-card" data-game="8queens">
-                <div class="game-icon queens-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                        <rect x="10" y="10" width="80" height="80" fill="#E6E6FA"/>
-                        <g fill="#6A5ACD">
-                            <circle cx="25" cy="25" r="10"/>
-                            <circle cx="75" cy="25" r="10"/>
-                            <circle cx="25" cy="75" r="10"/>
-                            <circle cx="75" cy="75" r="10"/>
-                        </g>
-                        <path d="M50 50 L40 60 L60 60 Z" fill="#FF6B6B"/>
-                    </svg>
-                </div>
-                <h2>8 وزیر</h2>
-                <p class="game-description">مسئله وزیران را حل کنید!</p>
-                <button onclick="window.location.href='./game3/index.html'">شروع بازی</button>
-                <button onclick="window.location.href='./vaz.txt'">آموزش 8 وزیر</button>
-            </div>
-        </main>
-        
-        <footer>
-            <p>&copy; created by iamalirezaebi </p>
+        <nav class="menu">
+            <a href="هانوی/index.html" class="menu-btn">🏰 هانوی</a>
+            <a href="سودوکو/index.html" class="menu-btn">🔢 سودوکو</a>
+            <a href="8 وزیر/index.html" class="menu-btn">♟️ 8 وزیر</a>
+            <a href="دوز/index.html" class="menu-btn">❌ دوز</a>
+            <a href="مربع/index.html" class="menu-btn">🧩 مربع‌های جادویی</a>
+            <a href="کنکن/index.html" class="menu-btn">🧠 کنکن</a>
+            <a href="کاکورو/index.html" class="menu-btn">🔠 کاکورو</a>
+        </nav>
+        <footer class="signature">
+            Created by iamalirezaebi
         </footer>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
